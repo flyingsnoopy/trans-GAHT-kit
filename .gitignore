@@ -8,6 +8,8 @@ node_modules/
 dist/
 web-build/
 
+.vscode/
+
 # Native
 *.orig.*
 *.jks
@@ -33,3 +35,4 @@ yarn-error.*
 
 # typescript
 *.tsbuildinfo
+
