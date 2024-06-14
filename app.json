@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "transHRTKit",
-    "slug": "transHRTKit",
+    "name": "transGAHTkit",
+    "slug": "transGAHTkit",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
