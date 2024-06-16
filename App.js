@@ -1,19 +1,36 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Image } from 'react-native';
+import { BottomBar } from './components/BottomBar';
 import tw from "twrnc";
+
+const PlaceholderImage = require('./assets/progynova.jpg');
+
+var display = (
+  <View style={tw.style`flex flex-row justify-between w-full`}>
+    <Text style={tw.style`text-gray-400 w-1/6`}>12:00</Text>
+    <View style={tw.style`flex flex-col w-3/4`}>
+      <View style={tw.style`flex flex-row w-full border rounded-md`}>
+        <Image style={tw.style`h-20 w-36 m-2`} source={PlaceholderImage} />
+        <View style={tw.style`h-full flex flex-col items-start gap-1 m-2`}>
+          <Text>戊酸雌二醇</Text>
+          <Text>Estrogen</Text>
+          <Text>PO</Text>
+        </View>
+      </View>
+    </View>
+    
+  </View>
+)
+
 
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <View style={tw.style`flex flex-col gap-2 w-11/12`}>
-        <View style={tw.style`flex flex-row justify-between w-full`}>
-          <Text style={tw.style`text-gray-400 w-1/6`}>12:00</Text>
-          <View style={tw.style`flex flex-col w-2/3`}>
-            <Text></Text>
-          </View>
-        </View>
+      <View style={tw.style`flex-auto flex-col gap-2 m-6`}>
+        {display}
       </View>
+      <BottomBar/>
       <StatusBar style="auto" />
     </View>
   );
@@ -23,9 +40,9 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     flexDirection: 'column',
+    justifyContent: 'space-between',
     backgroundColor: '#fff',
     alignItems: 'center',
-    justifyContent:"flex-start",
-    marginTop:'0.75rem',
+    justifyContent: "flex-start",
   },
 });
