@@ -1,6 +1,8 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Image } from 'react-native';
+import { useState } from 'react';
 import { BottomBar } from './components/BottomBar';
+import { AddNewSchemeModal } from "./components/AddNew";
 import tw from "twrnc";
 
 const PlaceholderImage = require('./assets/progynova.jpg');
@@ -25,12 +27,14 @@ var display = (
 
 
 export default function App() {
+  const [isAddSchemeVisble,setIsAddSchemeVisble] = useState(false)
   return (
     <View style={styles.container}>
       <View style={tw.style`flex-auto flex-col gap-2 m-6`}>
         {display}
       </View>
-      <BottomBar/>
+      <BottomBar OpenAddScheme={() => setIsAddSchemeVisble(true)}/>
+      <AddNewSchemeModal isVisble={isAddSchemeVisble} Close={() => setIsAddSchemeVisble(false)}/>
       <StatusBar style="auto" />
     </View>
   );
