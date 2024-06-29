@@ -1,0 +1,13 @@
+{
+    "medicine":{
+        "progynova-cn":{
+            "EnglishGenericName":"Estradiol Valerate",
+            "LocalGenericName":"戊酸雌二醇",
+            "EnglishTradeName":"progynova",
+            "LocalTradeName":"补佳乐",
+            "Dosage":"PO",
+            "NumberInOnePackage":21,
+            "Local":"cn"
+        }
+    }
+}
