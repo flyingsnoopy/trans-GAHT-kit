@@ -22,16 +22,6 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    },
-    "plugins": [
-      [
-        "expo-asset",
-        {
-          "assets": [
-            "./assets/image/"
-          ]
-        }
-      ]
-    ]
+    }
   }
 }

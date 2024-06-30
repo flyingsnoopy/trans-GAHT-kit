@@ -17,8 +17,7 @@
     "react-dom": "18.2.0",
     "react-native": "0.74.2",
     "react-native-web": "~0.19.10",
-    "twrnc": "^4.2.0",
-    "expo-asset": "~10.0.9"
+    "twrnc": "^4.2.0"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0"

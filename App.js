@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { BottomBar } from './components/BottomBar';
 import { AddNewSchemeModal, AddNewMedicineModal } from "./components/AddNew";
 import { medicine } from "./assets/data.json";
+import { MedicineImage } from './components/medicine';
 import tw from "twrnc";
 
 
@@ -12,7 +13,7 @@ var display = (
     <Text style={tw.style`text-gray-400 w-28`}>12:00</Text>
     <View style={tw.style`flex flex-col`}>
       <View style={tw.style`flex flex-row w-full border rounded-md`}>
-        <Image style={tw.style`h-26 w-26 m-2`} source={"./assets/image/progynova-cn.jpg"} />
+        <MedicineImage Name={"progynova-th"}/>
         <View style={tw.style`h-full flex flex-col items-start gap-1 m-2`}>
           <Text>{medicine["progynova-cn"].EnglishTradeName}</Text>
           <Text>{medicine["progynova-cn"].EnglishGenericName}</Text>
