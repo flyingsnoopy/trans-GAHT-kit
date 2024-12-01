@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Modal, View, Text, Pressable, TextInput } from "react-native";
 import { medicine } from "../assets/data.json";
 import tw from "twrnc"
+import { MedicineImage } from "./medicine";
 
 const modalStyle = tw.style`w-full h-3/4 rounded-t absolute bottom-0 bg-white flex flex-col justify-start`
 
@@ -43,8 +44,17 @@ function ChoosePage({ GetMedicineChosen }) {
     const [searchInput, setSearchInput] = useState("")
     const [medicineList, setMedicineList] = useState([])
     function search(text) {
-        for (const i in medicine) {
-            
+        var innerMedicinelist = []
+        if (text == "") {
+            setMedicineList([])
+        } else {
+            for (const i in medicine) {
+                if (medicine[i].EnglishGenericName.toLowerCase().includes(text.toLowerCase()) || medicine[i].EnglishTradeName.toLowerCase().includes(text.toLowerCase())) {
+                    console.log(text)
+                    innerMedicinelist.push(<UnitMedicine Key={i} Content={medicine[i]} />)
+                }
+            }
+            setMedicineList(innerMedicinelist)
         }
         setSearchInput(text)
     }
@@ -61,7 +71,7 @@ function ChoosePage({ GetMedicineChosen }) {
                 </Pressable>
             </View>
             <View style={tw.style`flex w-full items-center`}>
-
+                {medicineList}
             </View>
         </View>
 
@@ -70,9 +80,16 @@ function ChoosePage({ GetMedicineChosen }) {
 
 function UnitMedicine({ Key, Content, ChooseFunc }) {
     const [chosen, setChosen] = useState(false)
+    function choose(){
+        if(chosen){
+            setChosen(false)
+        }else{
+            setChosen(true)
+        }
+    }
     return (
-        <Pressable style={tw.style`flex flex-row w-full border rounded-md`}>
-            <Image style={tw.style`h-26 w-26 m-2`} source={"./assets/image/"+Key+".jpg"} />
+        <Pressable style={tw.style`flex flex-row w-full border rounded-md`} onPress={choose}>
+            <MedicineImage Name={Key} />
             <View style={tw.style`h-full flex flex-col items-start gap-1 m-2`}>
                 <Text>{Content.EnglishTradeName}</Text>
                 <Text>{Content.EnglishGenericName}</Text>

@@ -13,7 +13,7 @@ var display = (
     <Text style={tw.style`text-gray-400 w-28`}>12:00</Text>
     <View style={tw.style`flex flex-col`}>
       <View style={tw.style`flex flex-row w-full border rounded-md`}>
-        <MedicineImage Name={"progynova-th"}/>
+        <MedicineImage Name={"progynova-cn"}/>
         <View style={tw.style`h-full flex flex-col items-start gap-1 m-2`}>
           <Text>{medicine["progynova-cn"].EnglishTradeName}</Text>
           <Text>{medicine["progynova-cn"].EnglishGenericName}</Text>

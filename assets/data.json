@@ -1,13 +1,38 @@
 {
-    "medicine":{
-        "progynova-cn":{
-            "EnglishGenericName":"Estradiol Valerate",
-            "LocalGenericName":"戊酸雌二醇",
-            "EnglishTradeName":"progynova",
-            "LocalTradeName":"补佳乐",
-            "Dosage":"PO",
-            "NumberInOnePackage":21,
-            "Local":"cn"
+    "medicine": {
+        "progynova-cn": {
+            "EnglishGenericName": "Estradiol Valerate",
+            "LocalGenericName": "戊酸雌二醇",
+            "EnglishTradeName": "Progynova",
+            "LocalTradeName": "补佳乐",
+            "Dosage": "PO",
+            "NumberInOnePack": 21,
+            "NumberInOneBox": 1,
+            "Local": "cn"
+        },
+        "progynova-de": {
+            "EnglishGenericName": "Estradiol Valerate",
+            "EnglishTradeName": "Progynova",
+            "Dosage": "PO",
+            "NumberInOnePack": 21,
+            "NumberInOneBox": 3,
+            "Local": "de"
+        },
+        "progynova-th": {
+            "EnglishGenericName": "Estradiol Valerate",
+            "EnglishTradeName": "Progynova",
+            "Dosage": "PO",
+            "NumberInOnePack": 28,
+            "NumberInOneBox": 3,
+            "Local": "th"
+        },
+        "progynova-in": {   
+            "EnglishGenericName": "Estradiol Valerate",
+            "EnglishTradeName": "Progynova",
+            "Dosage": "PO",
+            "NumberInOnePack": 28,
+            "NumberInOneBox": 1,
+            "Local": "in"
         }
     }
 }
